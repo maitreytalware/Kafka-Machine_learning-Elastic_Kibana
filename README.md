@@ -111,18 +111,6 @@ From here on I will be putting commands for mac, commands for windows can be fou
 zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
 ```
 
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    <ipython-input-1-ad95f30ad953> in <module>
-    ----> 1 zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
-    
-
-    NameError: name 'zookeeper' is not defined
-
-
 ## <font color='gray'>3.3 Starting the Kafka Server</font>  
 
 
@@ -151,11 +139,6 @@ sudo cassandra -f
 ```
 
 ## <font color='gray'>4.3 Putting data into Cassandra</font>  
-
-
-```python
-
-```
 
 
 ```python
