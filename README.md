@@ -103,7 +103,7 @@ We have built our own data simulator which is produces up to 80 transactions per
 ------------------------
 
 ## <font color='gray'>2.2 Structure of the data</font> 
-<img src="https://botjs2.s3.amazonaws.com/data-schema.png" width="600" height="300">
+<img src="https://botjs2.s3.amazonaws.com/data-schema.png" width="600" height="600">
 
 ------------------------
 
