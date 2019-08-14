@@ -1,7 +1,16 @@
 
 # Real time data handling with Kafka
 ##            <font color='gray'> Machine learning in production, with visualisation on real time</font>  
-                                                                            - Maitrey Talware
+                                                 - Maitrey Talware
+-----------------------------
+
+#### *The main aim of this project is to build an scable architecture which has capibility to :-*
+
+1. Handle Real Time Data - __*(Kafka)*__
+2. Perform Machine learining on the fly on huge amount of data -  __*(SparkML)*__
+3. Store large amount of data data - __*(Cassandra/Elastic)*__
+4. Visualize on Real Time - __*(Kibana)*__
+
 ----------------------
 ## Table of contents
 
@@ -15,7 +24,7 @@
                 <li><a href="#ref2">Data</a></li>
         <ul>
          <li><a href="#ref3">Creating data</a></li>
-        <li><a href="#ref4"> Structure of Data</a></li>
+        <li><a href="#ref4"> Structure of the Data</a></li>
         </ul>
         <li><a href="#ref2">Kafka</a></li>
         <ul>
@@ -31,7 +40,8 @@
         </ul>
         <li><a href="#ref2">ElasticSearch</a></li>
         <ul>
-         <li><a href="#ref3">Starting the Elasticsearch</a></li>
+         <li><a href="#ref3">Installing ElasticSearch</a></li>
+         <li><a href="#ref3">Starting the Elasticsearch Server</a></li>
          <li><a href="#ref3">Sending data to ElasticSearch</a></li>
         </ul>
                 <li><a href="#ref2">Spark</a></li>
@@ -40,9 +50,13 @@
         </ul>
         <li><a href="#ref2">Kibana</a></li>
         <ul>
+         <li><a href="#ref3">Installing Kibana</a></li>
+         <li><a href="#ref3">Starting the Kibana Server</a></li>  
          <li><a href="#ref3">Visualisations</a></li>
         </ul>
+        <li><a href="#ref9">How to Run this Project</a></li>
         <li><a href="#ref9">Conclusion section and Future Scope</a></li>
+        <li><a href="#ref9">References</a></li>
     </ol>
 </div>
 <br>
@@ -58,7 +72,7 @@ Therefore, there is a need to automate the ever-increasing demand for fraud dete
 --------------------
 ## <font color='gray'>1.1 Architecture Diagram</font> 
 
-<img src="https://botjs2.s3.amazonaws.com/Architecture.png" width="650" height="350">
+<img src="https://botjs2.s3.amazonaws.com/Architecture.png" width="800" height="400">
 
 ----------------------
 
@@ -88,8 +102,8 @@ We have built our own data simulator which is produces up to 80 transactions per
 
 ------------------------
 
-## <font color='gray'>2.2 Structure of data</font> 
-<img src="https://botjs2.s3.amazonaws.com/data-schema.png" height="200">
+## <font color='gray'>2.2 Structure of the data</font> 
+<img src="https://botjs2.s3.amazonaws.com/data-schema.png" width="600" height="300">
 
 ------------------------
 
@@ -101,9 +115,10 @@ https://medium.com/@Ankitthakur/apache-kafka-installation-on-mac-using-homebrew-
 #### For Windows
 https://dzone.com/articles/running-apache-kafka-on-windows-os
 
-### NOTE 
+### <font color='Red'>NOTE</font>  
 From here on I will be putting commands for mac, commands for windows can be found from link above, they are almost similar for windows you just need to run .bat files
 
+----------------------
 ## <font color='gray'>3.2 Starting the zookeeper Server</font>  
 
 
@@ -111,6 +126,7 @@ From here on I will be putting commands for mac, commands for windows can be fou
 zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
 ```
 
+---------------------------
 ## <font color='gray'>3.3 Starting the Kafka Server</font>  
 
 
@@ -128,9 +144,10 @@ https://medium.com/@areeves9/cassandras-gossip-on-os-x-single-node-installation-
 
 
 
-### NOTE 
+### <font color='red'>NOTE</font>  
 From here on I will be putting commands for mac, commands for windows can be found from link above, they are almost similar for windows you just need to run .bat files
 
+-----------------------
 ## <font color='gray'>4.2 Starting Cassandra Server</font>  
 
 
@@ -138,6 +155,7 @@ From here on I will be putting commands for mac, commands for windows can be fou
 sudo cassandra -f
 ```
 
+--------------------
 ## <font color='gray'>4.3 Putting data into Cassandra</font>  
 
 
@@ -150,8 +168,8 @@ sudo cassandra -f
 ## <font color='gray'>5.1 Installing ElasticSearch</font>  
 ##### Download and unzip elasticsearch from - https://www.elastic.co/downloads/elasticsearch
 
-
-## <font color='gray'>5.2 Starting the elastic Server</font>  
+-----------------------
+## <font color='gray'>5.2 Starting the Elastic Server</font>  
 ##### Open Terminal and cd to unzipped elasticsearch folder 
 #### *For Mac*
 
@@ -175,10 +193,10 @@ bin\elasticsearch.bat
 ---------------
 # 7. Kibana
 ## <font color='gray'>7.1 Installing Kibana</font>  
-##### Download and unzip elasticsearch from -https://www.elastic.co/downloads/kibana
+##### Download and unzip elasticsearch from - https://www.elastic.co/downloads/kibana
 
-
-## <font color='gray'>7.2 Starting the kibana Server</font>  
+--------------
+## <font color='gray'>7.2 Starting the Kibana Server</font>  
 ##### Open Terminal and cd to unzipped kibana folder 
 #### *For Mac*
 
@@ -201,7 +219,7 @@ bin\kibana.bat
 Credit Card transactions is one of the emerging ‘preferred-payment’ methods in the whole world, and we need to build fraud-detection that can process, protect and visualize the credit card transaction data.
 Our system has managed to accurately classify the transactions based on the data generated from the producer system. The input data has been made robust such that it reduces any kind of data loss. After understanding the real time processing and analysis technologies, data is stored in distributed fashion and is retrieved using in real time using index-based search method. The processing and classification needed an appropriate method for visualization to have an overview of system performance and correct user understanding. Kibana tool has helped to achieve greater understanding using visualizations.
 
-
+--------------
 ## <font color='gray'>8.2 Future Scope</font>  
 
 
@@ -211,6 +229,9 @@ Existing Architecture stack can accommodate more producers and consumers.
 Simply changing the IP addresses of Elastic search, Kibana and Cassandra, we can run it on Cluster environment.
 ### More Data Accomodation
 Predictability and ML can be more robust by adding more advanced Features for data.
+
+---------------------------
+# 9. References
 
 
 ```python
